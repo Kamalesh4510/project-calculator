@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+   <style>
+      section{
+         background-color: black;
+         position: absolute;
+         color: aliceblue;
+      }
+      input{
+         color: aliceblue;
+         font-size: 30px;
+         text-align: right;
+         background-color: black;
+         width: 300px;
+         height: 120px;
+         border: none;
+      }
+       .r1{
+         /* border-radius: 20px; */
+         /* color: aliceblue; */
+         display: flex;
+         padding: 15px;
+         justify-content: space-between;
+         font-size: 25px;
+         /* width: 100px; */
+         /* height: 100px; */
+         /* border-color: aliceblue; */
+      } 
+      .r1 div{
+         font-size: 30px;
+         padding: 10px 15px;
+         border-radius: 70%;
+         background-color: grey;
+         text-align: center;
+      }
+      .r1 div:active{
+           background-color: rgb(255, 234, 0);
+      }
+      #t1{
+         background-color: rgb(206, 97, 95); 
+      }
+      #t2{
+         background-color: rgb(206, 17, 17);
+      }
+      #t1:active{
+         background-color: rgb(79, 21, 133);
+      }
+      #t2:active{
+         background-color: rgb(44, 244, 237);
+      }
+    </style>
+   <body>
+      <section>
+         <input type="text" name id="rez">
+         <div class="r1">
+            <div id="t1" onclick="del()">AC</div>
+            <div id="t1" onclick="les()"><</div>
+            <div id="t1" onclick="gre()">></div>
+            <div id="t1" onclick="div()">/</div>
+         </div>
+         <div class="r1">
+            <div onclick="sev()">7</div>
+            <div onclick="eig()">8</div>
+            <div onclick="nine()">9</div>
+            <div id="t1" onclick="mul()">*</div>
+         </div>
+         <div class="r1">
+            <div onclick="four()">4</div>
+            <div onclick="fiv()">5</div>
+            <div onclick="six()">6</div>
+            <div id="t1" onclick="min()">-</div>
+         </div>
+         <div class="r1">
+            <div onclick="one()">1</div>
+            <div onclick="two()">2</div>
+            <div onclick="three()">3</div>
+            <div id="t1" onclick="pl()">+</div>
+         </div>
+         <div class="r1">
+            <div onclick="per()">%</div>
+            <div onclick="zero()">0</div>
+            <div onclick="dot()">.</div>
+            <div id="t2" onclick="equal()">=</div>
+         </div>
+
+      </section>
+   </body>
+   <script>
+      function zero(){
+      document.getElementById('rez').value += 0
+      }
+      function one(){
+      document.getElementById('rez').value += 1
+      }
+      function two(){
+      document.getElementById('rez').value += 2
+      }
+      function three(){
+      document.getElementById('rez').value += 3
+      }
+      function four(){
+      document.getElementById('rez').value += 4
+      }
+      function fiv(){
+      document.getElementById('rez').value += 5
+      }
+      function six(){
+      document.getElementById('rez').value += 6
+      }
+      function sev(){
+      document.getElementById('rez').value += 7
+      }
+      function eig(){
+      document.getElementById('rez').value += 8
+      }
+      function nine(){
+      document.getElementById('rez').value += 9
+      }
+
+      function pl(){
+      document.getElementById('rez').value += '+'
+      }
+      function min(){
+      document.getElementById('rez').value += '-'
+      }
+       function mul(){
+       document.getElementById('rez').value += '*'
+       }
+      function per(){
+      document.getElementById('rez').value += '%'
+      }
+      function dot(){
+      document.getElementById('rez').value += '.'
+      }
+      function div(){
+      document.getElementById('rez').value += '/'
+      }
+      function les(){
+      document.getElementById('rez').value += '<'
+      }
+      function gre(){
+      document.getElementById('rez').value += '>'
+      }
+      function del(){
+      document.getElementById('rez').value = ''
+       }
+
+      function equal(){
+         a = document.getElementById('rez').value
+         document.getElementById('rez').value = eval(a)
+      }
+
+
+    </script>
+
+</html>
